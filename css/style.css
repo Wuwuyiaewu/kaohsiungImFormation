@@ -1,0 +1,279 @@
+*{
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Noto Sans JP', sans-serif;
+	overflow-y: scroll;
+
+}
+.clearfix{
+	clear: both;
+}
+.container{
+	max-width: 1024px;
+	margin: auto;
+}
+header{
+	position: relative;
+	height: 590px;
+}
+/* 標題 */
+header h1{
+	position: absolute;
+	top: 89px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	color: #fff;
+	font-size: 40px;
+	letter-spacing: 3.89px;
+}
+/* 標題背景 */
+.head_b{
+	height: 380px;
+	background: url(../assets/Hero.png);
+}
+
+/* 高雄市景點選擇區 */
+.districtSty{
+	position: absolute;
+	top: 225px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 452px;
+	height: 48px;
+
+	background: rgba(255,255,255,0.70);
+	border: 3px solid #FFFFFF;
+	border-radius: 3px;
+}
+/* 熱門行政區塊 */
+
+.hotArea{
+	position: absolute;
+	top: 352px;
+	left: 50%;
+	transform: translateX(-50%);
+	
+	width: 800px;
+	height: 112px;
+
+	background: #FFFFFF;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+	border-radius: 5px;
+}
+.hotArea h4{
+	position: absolute;
+	top: 20px;
+	left: 26px;
+
+	font-size: 18px;
+	color: #000000;
+}
+/* 選擇的icon */
+.head_b img{
+	position: absolute;
+	top: 245px;
+	left: 712px;
+	z-index: 5;
+}
+/* 熱門區快捷 */
+.looking{
+	padding-left: 51px;
+}
+.looking button:nth-child(1){background-color: #8A82CC}
+.looking button:nth-child(2){background-color: #FFA782}
+.looking button:nth-child(3){background-color: #F5D105}
+.looking button:nth-child(4){background-color: #559AC8}
+
+.hotArea button{
+	position: relative;
+	margin-top: 52px;
+	margin-right: 30px;
+
+	width: 130px;
+	height: 42px;
+	font-size: 20px;
+	color: #FFFFFF;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+}
+.hotArea button:hover{
+	color: #000;
+	font-weight: 700;
+}
+.hotArea button:focus{
+	color: #555;
+}
+.hotArea button::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.8);
+}
+.hotArea button:hover::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.2);
+
+	cursor: pointer;
+}
+/* 分隔線 */
+.sep{
+	position: absolute;
+	top: 513px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	border: 1px dotted #559AC8;
+	width: 87.9%;
+}
+.sep img{
+	position: absolute;
+	left: 50%;
+	background: #fff;
+	transform: translate(-50%,-50%);
+}
+.sep::before{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	content: "";
+	display: block;
+
+	width: 40px;
+	height: 24px;
+	background: #fff;
+}
+.sep::after{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	content: "";
+	display: block;
+
+	width: 24px;
+	height: 24px;
+	border:2px solid #559AC8;
+	border-radius: 50%;
+}
+/* 景點資訊 */
+.view_holder{
+	position: relative;
+	float: left;
+	margin: 0 auto;
+	padding: 0 32px;
+}
+.view_holder::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.view_title{
+	text-align: center;
+	font-size: 36px;
+	line-height: 43px;
+	color: #8A82CC;
+}
+/* 景點簡圖 */
+.view_box{
+	float: left;
+	width: 464px;
+	height: 280px;
+
+	padding: 0;
+	margin: 16px 8px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+
+	overflow: hidden;
+}
+.view_head{
+	position: relative;
+	height: 155px;
+
+	padding: 0 20px;
+	overflow: hidden;
+}
+.view_head img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-25%);
+	z-index: -1;
+
+	max-width: 100%;
+	min-height: 155px;
+
+}
+.view_head span:nth-child(2){
+	display: inline-block;
+	font-size: 24px;
+	line-height: 28px;
+	color: #FFFFFF;
+	
+	margin-top: 117px;
+	float: left;
+	
+}
+.view_head span:nth-child(3){
+	display: inline-block;
+	font-size: 16px;
+	line-height: 19px;
+	color: #FFFFFF;
+	
+	margin-top: 125px;
+	float: right;
+}
+/* 浮標 */
+.stick_top{
+	position: sticky;
+	top: 200px;
+	right: 0;
+}
+/* 景點內文 */
+.view_detail{
+	position: relative;
+	padding: 20px;
+}
+.view_detail p{
+	line-height: 18px;
+	font-size: 16px;
+	color: #000000;
+	margin: 8px;
+}
+.view_detail p:nth-child(4){
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+.view_detail span{
+	float: left;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	margin-right: 8px;
+}
+section{
+}
+footer{
+	width: 1024px;
+	height: 90px;
+
+	background: #559AC8;
+	padding: 24px 0;
+	margin-top: 240px;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+}
